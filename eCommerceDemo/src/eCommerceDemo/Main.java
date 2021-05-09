@@ -12,14 +12,14 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		User user = new User(1,"Gonca Gül","Kazancý","a@gmailcom","123456");
+		User user = new User(1,"Gonca Gül","Kazancý","a@gmail.com","123456");
 		UserService userManager = new UserManager(new HibernateUserDao());
 		AuthService authManager = new AuthManager(userManager,new MailManager());
 		
 		
 		authManager.register(user);
 		
-		//authManager.login("a@gmailcom","123456");
+		//authManager.login("a@gmail.com","123456");
 
 	}
 
